@@ -8,9 +8,15 @@ export default {
     "./app.vue",
     "./error.vue",
   ],
-  css: ['~/assets/main.scss'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["Roboto", "roboto"],
+      },
+      colors: {
+        'one': '#FF6900'
+      }
+    },
   },
   plugins: [],
 }
