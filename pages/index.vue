@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import Product from "../components/Product.vue";
-
 const route = useRoute()
 
 onMounted(() => {
@@ -22,4 +20,5 @@ provide("ShopCart", ShopCart)
   <Header/>
   <Advert/>
   <Product/>
+  <Footer/>
 </template>

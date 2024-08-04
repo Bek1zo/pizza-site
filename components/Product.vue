@@ -22,8 +22,8 @@ const delFromCart = (item: object) => {
 
     <div class="w-10/12 flex flex-col justify-center items-center gap-8">
       <div class="menu-list w-full flex justify-center">
-        <ul class="flex gap-4 flex-wrap font-roboto tracking-widest">
-          <li v-for="i in menuList" class="cursor-pointer hover:text-one transition-colors delay-100">{{ i.name }}</li>
+        <ul class="flex gap-4 flex-wrap font-mono font-bold text-lg tracking-wide">
+          <li v-for="i in menuList" class="cursor-pointer hover:text-green-500 transition-colors delay-100">{{ i.name }}</li>
         </ul>
       </div>
       <div class="product w-full flex flex-col gap-4">
