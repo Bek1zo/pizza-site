@@ -36,17 +36,26 @@ const addToCart = (item: object) => {
 
   <ProductView/>
 
-  <div class="flex w-full justify-center mt-10">
+  <div class="flex w-full justify-center sticky top-0 h-20 bg-white border-b-2">
 
-    <div class="w-10/12 flex flex-col justify-center items-center gap-8">
+    <div class="flex flex-col justify-center items-center gap-8">
+
       <div class="menu-list w-full flex justify-center">
         <ul class="flex gap-4 flex-wrap font-mono font-bold text-lg tracking-wide">
-          <li v-for="i in menuList" class="cursor-pointer hover:text-green-500 transition-colors delay-100">{{ i.name }}</li>
+          <li v-for="i in menuList" class="cursor-pointer hover:text-green-500 transition-colors delay-100"><a
+              :href="'#' + i.name">{{ i.name }}</a></li>
         </ul>
       </div>
+    </div>
+  </div>
+
+  <div class="flex w-full justify-center">
+
+    <div class="w-10/12 flex flex-col justify-center items-center gap-8">
+
       <div class="product w-full flex flex-col gap-4">
-        <div v-for="category in productList" class="flex flex-col">
-          <hr class="h-px bg-gray-300 border-0"/>
+        <div v-for="category in productList" :id="category.name" class="flex flex-col">
+
           <div class="flex m-10">
             <h1 class="text-xl font-robot-slab tracking-widest">{{ category.name }}</h1>
           </div>
@@ -73,7 +82,7 @@ const addToCart = (item: object) => {
               </div>
             </div>
           </div>
-
+          <hr class="h-px bg-gray-300 border-0"/>
         </div>
       </div>
     </div>
