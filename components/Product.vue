@@ -27,7 +27,7 @@ const ShopCartSum = inject('ShopCartSum')
 const addToCart = (item: object) => {
   ShopCartSum.value += item.price
   ShopCart.value.push(item)
-  localStorage.setItem('ShopCartSum', JSON.stringify(ShopCartSum.value))
+  localStorage.setItem('ShopCartSum', ShopCartSum.value)
   localStorage.setItem('ShopCart', JSON.stringify(ShopCart.value))
 }
 

@@ -10,10 +10,10 @@ onMounted(() => {
   const storageSum = localStorage.getItem('ShopCartSum')
   if (storageCart) {
     ShopCart.value = JSON.parse(storageCart)
-    ShopCartSum.value = storageSum
+    ShopCartSum.value = JSON.parse(storageSum)
   } else {
     localStorage.setItem('ShopCart', JSON.stringify([]))
-    localStorage.setItem('ShopCartSum', JSON.stringify(0))
+    localStorage.setItem('ShopCartSum', 0)
   }
 })
 

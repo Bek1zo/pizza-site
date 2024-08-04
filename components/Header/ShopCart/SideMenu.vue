@@ -8,10 +8,10 @@ const ShopCartCount = inject("ShopCartCount")
 
 
 const delFromCart = (item: object) => {
-  ShopCartSum.value =- item.price
+  ShopCartSum.value -= item.price
   ShopCart.value.splice(ShopCart.value.indexOf(item), 1)
   localStorage.setItem('ShopCart', JSON.stringify(ShopCart.value))
-  localStorage.setItem('ShopCartSum', JSON.stringify(ShopCartSum.value))
+  localStorage.setItem('ShopCartSum', ShopCartSum.value)
 }
 </script>
 
