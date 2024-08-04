@@ -5,7 +5,7 @@ const { width } = useWindowSize()
 </script>
 
 <template>
-  <div class="w-80 hover:w-96 transition-all">
+  <div class="md:w-80 w-0 hover:w-96 transition-all">
     <div class="flex justify-center items-center font-mono h-12 show w-96 md:visible invisible">
       <div class="text-white cursor-pointer bg-green-500 rounded-full w-full flex justify-center items-center h-full p-2">
         <div class="flex items-center justify-center">

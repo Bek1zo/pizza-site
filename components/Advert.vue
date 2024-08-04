@@ -21,7 +21,7 @@ const cards = ref([
 </script>
 
 <template>
-  <div class="advert-wrapper flex gap-4">
+  <div class="advert-wrapper flex gap-4 flex-col md:flex-row justify-center items-center mt-28">
     <div v-for="item in cards" :key="item.id"
         class="relative grid h-[25rem] w-full max-w-[20rem] flex-col items-end justify-center overflow-hidden rounded-xl bg-white bg-clip-border text-center text-gray-700">
       <div class="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none text-gray-700 shadow-none">

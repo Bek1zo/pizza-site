@@ -18,11 +18,11 @@ const delFromCart = (item: object) => {
 </script>
 
 <template>
-  <div class="flex w-full justify-center">
+  <div class="flex w-full justify-center mt-10">
 
     <div class="w-10/12 flex flex-col justify-center items-center gap-8">
       <div class="menu-list w-full flex justify-center">
-        <ul class="flex gap-4 font-roboto tracking-widest">
+        <ul class="flex gap-4 flex-wrap font-roboto tracking-widest">
           <li v-for="i in menuList" class="cursor-pointer hover:text-one transition-colors delay-100">{{ i.name }}</li>
         </ul>
       </div>
@@ -57,19 +57,19 @@ const delFromCart = (item: object) => {
     </div>
 
 
-    <div class="gap-2 flex flex-col w-80 fixed right-0 bottom-10 shadow-big p-2 z-50">
-      <div class="font-mono font-bold text-xl text-center">Корзина</div>
-      <div class="cart mr-4">
-        <div class="flex justify-between" v-for="item in ShopCart">
-          <h1>{{ item.name }}</h1>
-          <div @click="delFromCart(item)" class="cursor-pointer">×</div>
-        </div>
-        <div class="font-bold flex justify-center mt-5 border-2 rounded-full cursor-pointer">
-          Оформить заказ
-        </div>
-      </div>
+<!--    <div class="gap-2 flex flex-col w-80 fixed right-0 bottom-10 shadow-big p-2 z-50">-->
+<!--      <div class="font-mono font-bold text-xl text-center">Корзина</div>-->
+<!--      <div class="cart mr-4">-->
+<!--        <div class="flex justify-between" v-for="item in ShopCart">-->
+<!--          <h1>{{ item.name }}</h1>-->
+<!--          <div @click="delFromCart(item)" class="cursor-pointer">×</div>-->
+<!--        </div>-->
+<!--        <div class="font-bold flex justify-center mt-5 border-2 rounded-full cursor-pointer">-->
+<!--          Оформить заказ-->
+<!--        </div>-->
+<!--      </div>-->
 
-    </div>
+<!--    </div>-->
   </div>
 </template>
 
