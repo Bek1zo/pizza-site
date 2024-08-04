@@ -20,15 +20,15 @@ const selectedProduct: ref<Product> = ref({
 })
 provide('selectedProduct', selectedProduct)
 
+const ShopCartSum = inject('ShopCartSum')
+
 const addToCart = (item: object) => {
+  ShopCartSum.value += item.price
   ShopCart.value.push(item)
+  localStorage.setItem('ShopCartSum', JSON.stringify(ShopCartSum.value))
   localStorage.setItem('ShopCart', JSON.stringify(ShopCart.value))
 }
 
-const delFromCart = (item: object) => {
-  ShopCart.value.splice(ShopCart.value.indexOf(item), 1)
-  localStorage.setItem('ShopCart', JSON.stringify(ShopCart.value))
-}
 
 </script>
 
@@ -67,7 +67,7 @@ const delFromCart = (item: object) => {
                   <p class="leading-normal text-gray-700">{{ item.description }}</p>
                 </div>
                 <div class="flex items-center justify-between p-4">
-                  <button class="px-4 py-2 bg-green-600 text-green-50">В корзину</button>
+                  <button class="px-4 py-2 bg-green-600 text-green-50" @click="addToCart(item)">В корзину</button>
                   <span class="text-xl text-green-600">{{ item.price }} ₽</span>
                 </div>
               </div>

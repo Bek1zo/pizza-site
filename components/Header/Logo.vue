@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="flex justify-center items-center text-center uppercase font-roboto text-green-500 font-bold text-2xl tracking-widest">
-    Nuxt Pizza
-  </div>
+  <a href="https://bekizo.ru" class="flex items-center">
+    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Next Pizza</span>
+  </a>
 </template>
 
 <style scoped>

@@ -10,9 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/ui": "^2.18.3",
     "flowbite": "^2.4.1",
     "nuxt": "^3.12.4",
-    "vue": "latest"
+    "vue": "latest",
+    "vue3-burger-menu": "^1.1.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.12.1",
