@@ -36,8 +36,6 @@ const cards = ref([
       </div>
     </div>
   </div>
-
-
 </template>
 
 <style scoped>
