@@ -15,11 +15,11 @@ const clickRightSideMenu = () => {
 <template>
   <div>
     <ul v-if="width > 1024" class="flex gap-4 justify-end items-center md:visible invisible h-full font-robot-slab">
-      <li class="cursor-pointer hover:text-one transition-colors delay-100">Меню</li>
-      <li class="cursor-pointer hover:text-one transition-colors delay-100">Акции</li>
-      <li class="cursor-pointer hover:text-one transition-colors delay-100">Бонусы</li>
-      <li class="cursor-pointer hover:text-one transition-colors delay-100">Контакты</li>
-      <li class="cursor-pointer hover:text-one transition-colors delay-100">Вход</li>
+      <li class="cursor-pointer hover:text-green-500 transition-colors delay-100">Меню</li>
+      <li class="cursor-pointer hover:text-green-500 transition-colors delay-100">Акции</li>
+      <li class="cursor-pointer hover:text-green-500 transition-colors delay-100">Бонусы</li>
+      <li class="cursor-pointer hover:text-green-500 transition-colors delay-100">Контакты</li>
+      <li class="cursor-pointer hover:text-green-500 transition-colors delay-100">Вход</li>
     </ul>
     <div v-else @click="clickRightSideMenu()" class="pt-4 pl-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="m-auto w-8 h-8" viewBox="0 0 50 50">

@@ -10,6 +10,9 @@ export default {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        big: 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
+      },
       fontFamily: {
         roboto: ["Roboto", "roboto"],
       },
