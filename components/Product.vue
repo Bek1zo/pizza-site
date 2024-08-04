@@ -5,6 +5,8 @@ import {productList} from "../public/product";
 
 const ShopCart = inject('ShopCart')
 
+const HeaderVisible = inject("HeaderVisible")
+
 interface Product {
   id: number,
   name: string,
@@ -41,9 +43,12 @@ const addToCart = (item: object) => {
     <div class="flex flex-col justify-center items-center gap-8">
 
       <div class="menu-list w-full flex justify-center">
-        <ul class="flex gap-4 flex-wrap font-mono font-bold text-lg tracking-wide">
+        <ul class="flex gap-4 justify-center items-center flex-wrap font-mono font-bold text-lg tracking-wide">
           <li v-for="i in menuList" class="cursor-pointer hover:text-green-500 transition-colors delay-100"><a
               :href="'#' + i.name">{{ i.name }}</a></li>
+          <li v-if="!HeaderVisible">
+            <HeaderShopCartButton/>
+          </li>
         </ul>
       </div>
     </div>

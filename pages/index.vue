@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 const route = useRoute()
 
 const ShopCart = ref([])
@@ -25,11 +26,29 @@ provide("ShopCart", ShopCart)
 provide("ShopCartCount", ShopCartCount)
 provide("ShopCartSum", ShopCartSum)
 
+const ShopCartVisible = ref(false)
+provide("ShopCartVisible", ShopCartVisible)
+
+const HeaderVisible = ref(false)
+provide("HeaderVisible", HeaderVisible)
+
+const HeaderRef = ref(null)
+
+const { stop } = useIntersectionObserver(
+    HeaderRef,
+    ([{ isIntersecting }], observerElement) => {
+      HeaderVisible.value = isIntersecting
+    },
+)
+
 </script>
 
 <template>
-  <Header/>
-  <Advert/>
+  <section ref="HeaderRef">
+    <Header/>
+    <Advert/>
+  </section>
   <Product/>
   <Footer/>
+
 </template>
